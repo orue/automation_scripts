@@ -47,11 +47,7 @@ def backup_folder(folder):
 
 
 # Progress bar for folders
-with tqdm(
-    total=len(folders_to_backup), desc="Backing up folders", unit="folder"
-) as pbar:
-    for folder in folders_to_backup:
-        backup_folder(folder)
-        pbar.update(1)
+for folder in tqdm(folders_to_backup, desc="Backing up folders"):
+    backup_folder(folder)
 
 print(f"Backup completed: {DEST}")
