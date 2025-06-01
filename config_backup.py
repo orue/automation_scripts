@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 SOURCE = os.path.expanduser("~/.config")
 DEST_BASE = "/Volumes/ARCH/config-backups"
-folders_to_backup = ["ghostty", "zsh"]
+folders_to_backup = ["ghostty", "zsh", "nvim"]
 exclude_map = {
     "zsh": [
         ".git",
